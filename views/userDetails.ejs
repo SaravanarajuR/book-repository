@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User details</title>
+    <style>
+      .details{
+        width:90%;
+        background-color:aquamarine;
+        padding: 2%;
+        margin-bottom: 1%;
+        margin-left: 5%;
+        border-radius: 5%;
+      }
+      .remove-btn{
+        float:right;
+      }
+      .mail{
+        display: inline-block;
+      }
+    </style>
+</head>
+<body>
+    <%- include('logo') %>
+ 
+    <% users.forEach(function(object){ %>
+    <div class="details">
+      <h4 class="mail"><%= object.email %></h4>  
+      <Button class="remove-btn btn-danger btn-md">Remove</Button>  
+    </div>
+    <% }) %>
+
+</body>
+</html>
